@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: zeta_k
+# key: z
+# --
+\zeta_{\mathbf{${1:k}}_{${2:1}}} $0

@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: partial_phi
+# key: pf
+# --
+\partial_{${1:i}}\phi $0

@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: integrate
+# key: ∫
+# --
+\int_{${1:0}}^{${2:\infty}} d$0

@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: k
+# key: k
+# --
+\mathbf{${1:k}}_{${2:1}} $0

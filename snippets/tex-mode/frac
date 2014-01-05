@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: frac
+# key: f
+# --
+\frac{${1:1}}{$2} $0

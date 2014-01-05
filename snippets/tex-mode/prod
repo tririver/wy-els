@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: prod
+# key: prod
+# --
+\prod_{${1:n=0}}^{${2:\infty}} $0

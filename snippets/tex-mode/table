@@ -1,0 +1,14 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: table
+# key: tab
+# --
+\begin{table}[htbp]
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    field 1 & field 2 & field 3 & field 4 \\\\ \hline
+    value 1 & value 2 & value 3 & value 4 \\\\ \hline
+    \end{tabular}
+\end{center}
+\caption{\label{tab}}
+\end{table}

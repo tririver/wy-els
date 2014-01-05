@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: integrate
+# key: dk
+# --
+\int \frac{d^3${1:k}}{(2\pi)^3}~ $0

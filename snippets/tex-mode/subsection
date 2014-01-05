@@ -1,0 +1,7 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: subsection
+# key: ss
+# --
+\subsection{$1}
+
+$0

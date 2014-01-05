@@ -1,0 +1,6 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: setcounter_eq0
+# key: e0
+# --
+\setcounter{equation}{0}
+$0

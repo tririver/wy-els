@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: mathcal_sub
+# key: cs
+# --
+\mathcal{$1}_{$2}$0

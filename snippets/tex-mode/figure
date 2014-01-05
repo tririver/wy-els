@@ -1,0 +1,9 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: figure
+# key: fig
+# --
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{${1:figure_name}}
+\caption{\label{fig:${2:figure_label}} $0}
+\end{figure}

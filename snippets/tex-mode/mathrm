@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: mathrm
+# key: r
+# --
+\mathrm{$1}$0

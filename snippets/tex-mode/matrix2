@@ -1,0 +1,9 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: matrix2
+# key: mat2
+# --
+\left( \begin{array}{cc}
+  0 & 0 \\\\
+  0 & 0 
+\end{array} \right) 
+$0

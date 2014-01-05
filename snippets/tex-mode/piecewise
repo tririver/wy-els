@@ -1,0 +1,8 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: piecewise
+# key: piece
+# --
+\begin{cases}
+${1:value1}, & \text{if } ${2:case1} \\\\
+${3:value2}, & \text{if } ${4:case2}
+\end{cases}$0

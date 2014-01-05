@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: mathbf_sub
+# key: bs
+# --
+\mathbf{$1}_{$2}$0
