@@ -58,7 +58,7 @@ called by `org-babel-execute-src-block'"
 	 (tmp-script-file (org-babel-temp-file "mma-")))
     ;; actually execute the source-code block 
     (with-temp-file tmp-script-file (insert full-body))
-    (with-temp-file "/tmp/dbg" (insert full-body))
+    ;; (with-temp-file "/tmp/dbg" (insert full-body))
     ((lambda (raw)
        (if (or (member "code" result-params)
 	       (member "pp" result-params)
@@ -66,8 +66,7 @@ called by `org-babel-execute-src-block'"
 		    (not (member "table" result-params))))
 	   raw
 	 (org-babel-script-escape (org-babel-trim raw))))
-    (org-babel-eval (concat org-babel-mma-command " " tmp-script-file) ""))
-))
+    (org-babel-eval (concat org-babel-mma-command " " tmp-script-file) ""))))
 
 (defun org-babel-prep-session:mma (session params)
   "This function does nothing so far"

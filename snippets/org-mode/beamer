@@ -3,7 +3,7 @@
 # key: beamer
 # --
 #+latex_header: \hypersetup{colorlinks=true, urlcolor=blue}
-#+BEAMER_THEME: Madrid
+#+BEAMER_THEME: Rochester
 #+OPTIONS: H:2 toc:nil ^:nil
 
 #+TITLE: ${1:Title of Presentation}

@@ -1,0 +1,21 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: Beamer
+# key: Beamer
+# --
+#+begin_latex
+\AtBeginSection[] { 
+  \begin{frame}[t] 
+    \frametitle{Overview} 
+      \tableofcontents[sectionstyle=show/hide,subsectionstyle=hide/show/hide] 
+  \end{frame} 
+}
+\tableofcontents[hideallsubsections]
+#+end_latex
+#+BEAMER_THEME: Rochester
+#+OPTIONS: H:3 toc:nil ^:nil
+
+#+TITLE: ${1:title}
+#+AUTHOR: Yi Wang (DAMTP, Cambridge)
+#+EMAIL: yw366@cam.ac.uk
+
+* $0
