@@ -56,10 +56,10 @@
   (wy-tex-key "𝕝" "\\label")
   (wy-tex-key "§" "\\section")
   (wy-tex-key "◯" "\\subsection")
-  (wy-tex-key "【" "\\begin{equation}")
-  (wy-tex-key "】" "\\end{equation}")
-  (wy-tex-key "【" "\\begin{align}")
-  (wy-tex-key "】" "\\end{align}")
+  (wy-tex-key "⟦" "\\begin{equation}")
+  (wy-tex-key "⟧" "\\end{equation}")
+  (wy-tex-key "⟦" "\\begin{align}")
+  (wy-tex-key "⟧" "\\end{align}")
 
 
 

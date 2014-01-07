@@ -1,3 +1,5 @@
+(setq org-confirm-babel-evaluate nil)
+
 (setq org-export-html-validation-link nil)
 (setq org-support-shift-select t)
 (setq org-replace-disputed-keys t)
@@ -75,6 +77,18 @@ same directory as the org-buffer and insert a link to this file."
 
 ;;SET EMACS AS DEFAULT MAJOR MODE TO FOR ALL FILES WITH AN UNSPECIFIED MODE
 (setq default-major-mode 'org-mode)
+
+;; ========= work with yasnippet ============
+
+(defun yas/org-very-safe-expand ()
+  (let ((yas/fallback-behavior 'return-nil)) (yas/expand)))
+
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (make-variable-buffer-local 'yas/trigger-key)
+	    (setq yas/trigger-key [tab])
+	    (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
+	    (define-key yas/keymap [tab] 'yas/next-field)))
 
 ;; ============ end of package ==============
 

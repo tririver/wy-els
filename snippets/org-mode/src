@@ -1,0 +1,7 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: src
+# key: src
+# --
+#+BEGIN_SRC ${1:mma}
+  $2
+#+END_SRC

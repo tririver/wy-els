@@ -1,0 +1,13 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: beamer
+# key: beamer
+# --
+#+latex_header: \hypersetup{colorlinks=true, urlcolor=blue}
+#+BEAMER_THEME: Madrid
+#+OPTIONS: H:2 toc:nil ^:nil
+
+#+TITLE: ${1:Title of Presentation}
+#+AUTHOR: Yi Wang (DAMTP, Cambridge)
+#+EMAIL: yw366@cam.ac.uk
+
+$0

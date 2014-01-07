@@ -65,16 +65,18 @@
 
 (global-set-key (kbd "<M-return>") 'repeat)
 (global-set-key (kbd "M-?") 'describe-key)
+(global-set-key (kbd "M-h") 'describe-function)
 (global-set-key (kbd "M-r") 'eval-last-sexp)
 (global-set-key (kbd "M-R") 'eval-region)
 (global-set-key (kbd "M-\\") 'wy-math2)
 
 (add-hook 'org-mode-hook (lambda ()
       (local-set-key (kbd "M-p") 'wy-org-screenshot)
-))
+      (local-set-key (quote [f5]) 'wy-org-to-texpdf)
+      (local-set-key (kbd "<f6>") 'org-beamer-export-to-pdf)))
 
 (add-hook 'org-mode-hook (lambda ()
-      (local-set-key (quote [f5]) 'wy-org-to-texpdf)
+
 ))
 
 (defun wy-latex-compile ()
