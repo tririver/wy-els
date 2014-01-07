@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; Org-Babel support for evaluating python source code.
+;; Org-Babel support for evaluating Mathematica source code.
 
 ;;; Code:
 (require 'ob)
@@ -65,7 +65,7 @@ called by `org-babel-execute-src-block'"
 	       (and (member "output" result-params)
 		    (not (member "table" result-params))))
 	   raw
-	 (org-babel-python-table-or-string (org-babel-trim raw))))
+	 (org-babel-script-escape (org-babel-trim raw))))
     (org-babel-eval (concat org-babel-mma-command " " tmp-script-file) ""))
 ))
 
@@ -78,8 +78,8 @@ called by `org-babel-execute-src-block'"
   (error "Currently no support for sessions"))
 
 (defun org-babel-mma-var-to-mma (var)
-  "Convert an elisp value to a python variable.
-Convert an elisp value, VAR, into a string of python source code
+  "Convert an elisp value to a Mathematica variable.
+Convert an elisp value, VAR, into a string of Mathematica source code
 specifying a variable of the same value."
   (if (listp var)
       (concat "{" (mapconcat #'org-babel-mma-var-to-mma var ", ") "}")

@@ -13,6 +13,6 @@
 (require 'wy-tex)
 (require 'wy-txt)
 
-
+(require 'ob-mma)
 
 ;; ========== external packages =============
