@@ -1,0 +1,8 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: fun
+# key: fun
+# --
+#+NAME: ${1:fun-name}
+#+BEGIN_SRC ${2:mma} var: ${3:x}=${4:1}
+  $5
+#+END_SRC

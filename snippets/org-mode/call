@@ -1,0 +1,5 @@
+# contributor: Yi Wang <tririverwangyi@gmail.com>
+# name: call
+# key: call
+# --
+#+CALL: ${1:fun-name}(${2:x}=${3:1})
