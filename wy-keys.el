@@ -101,10 +101,6 @@
 
 ;; ============ mode spetific ===============
 
-(add-hook 'org-mode-hook (lambda ()
-      (local-set-key (kbd "M-p") 'my-org-screenshot)
-))
-
 (add-hook 'tex-mode-hook (lambda ()
 ;      (local-set-key (kbd "M-t") 'TeX-command-master)
 ;      (local-set-key (kbd "M-p") 'preview-document)
