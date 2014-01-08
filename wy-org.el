@@ -38,8 +38,6 @@
        (add-to-list 'org-file-apps '("\\.nb\\'" . "Mathematica %s"))
        ))
 
-(setq org-startup-with-inline-images t)
-
 (setq revert-without-query (quote (".*.org")))
 
 (setq org-src-fontify-natively t)
@@ -63,8 +61,7 @@ same directory as the org-buffer and insert a link to this file."
                   "_"
                   (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
   (call-process "import" nil nil nil filename)
-  (insert (concat "[[" filename "]]"))
-  (org-display-inline-images))
+  (insert (concat "[[" filename "]]")))
 
 (defun wy-org-to-texpdf ()
   "Export org file to latex pdf and view."

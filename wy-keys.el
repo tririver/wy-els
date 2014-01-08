@@ -69,9 +69,9 @@
 (global-set-key (kbd "M-r") 'eval-last-sexp)
 (global-set-key (kbd "M-R") 'eval-region)
 (global-set-key (kbd "M-\\") 'wy-math2)
+(global-set-key (kbd "M-p") 'wy-screenshot)
 
 (add-hook 'org-mode-hook (lambda ()
-      (local-set-key (kbd "M-p") 'wy-org-screenshot)
       (local-set-key (quote [f5]) 'wy-org-to-texpdf)
       (local-set-key (kbd "<f6>") 'org-beamer-export-to-pdf)))
 

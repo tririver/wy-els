@@ -97,6 +97,14 @@
     (kill-new res)
     (princ res)))
 
+(defun wy-screeenshot (s)
+  "Input file name and take a screen shot with this file name. An org link is inserted into the current buffer."
+  (interactive "sName of file:")
+  (let ((fn (if (string= s "") 
+		(concat (buffer-file-name) "_" (format-time-string "%Y%m%d_%H%M%S") ".png") 
+	      (concat s ".png"))))
+    (call-process "import" nil nil nil fn)
+    (insert (concat "[[file:" fn "][" fn "]]"))))
 
 ;; =========== end of package =============
 
