@@ -57,6 +57,7 @@
 ;; =================  etc ===================
 
 (setq visible-bell t)
+(add-to-list 'auto-mode-alist '("\\.m\\'" . mma-mode))
 
 ;; ============ end of package ==============
 

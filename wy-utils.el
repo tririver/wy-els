@@ -34,7 +34,8 @@
 (defun wy-toggle-comment-rl ()
   (interactive)
   (copy-region-as-kill (wy-rl-beginning) (wy-rl-end))
-  (comment-or-uncomment-region (wy-rl-beginning) (wy-rl-end)))
+  (comment-or-uncomment-region (wy-rl-beginning) (wy-rl-end))
+  (next-line))
 
 
 (defun wy-trim-left (s)

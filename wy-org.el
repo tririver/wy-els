@@ -1,7 +1,13 @@
 (setq org-confirm-babel-evaluate nil)
 
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((emacs-lisp . nil)
+        (C . t) (python . t)))
+
 (require 'org-latex)
-(setq org-latex-listings t)
+;; (setq org-latex-listings t)
+(setq org-latex-listings 'minted)
 
 (setq org-export-html-validation-link nil)
 (setq org-support-shift-select t)

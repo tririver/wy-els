@@ -2,9 +2,9 @@
 # name: beamer
 # key: beamer
 # --
-#+LATEX: \input{/home/wangyi/Templates/org_beamer_header.tex}
-#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{minted}
 #+LATEX_HEADER: \usepackage{color}
+#+LaTeX: \input{/home/wangyi/Templates/org_beamer_minted_header.tex}
 #+BEAMER_THEME: Rochester
 #+OPTIONS: H:3 toc:nil ^:nil
 
