@@ -16,6 +16,7 @@
 (require 'ob-eval)
 ;; Optionally require mma.el for font lock, etc
 (require 'mma nil 'noerror)
+(add-to-list 'org-src-lang-modes '("mathematica" . "mma"))
 
 (defvar org-babel-tangle-lang-exts)
 (add-to-list 'org-babel-tangle-lang-exts '("mathematica" . "m"))
