@@ -72,12 +72,9 @@
 (global-set-key (kbd "M-p") 'wy-screenshot)
 
 (add-hook 'org-mode-hook (lambda ()
+      (local-set-key (kbd "M-p") 'wy-screenshot)
       (local-set-key (quote [f5]) 'wy-org-to-texpdf)
       (local-set-key (kbd "<f6>") 'org-beamer-export-to-pdf)))
-
-(add-hook 'org-mode-hook (lambda ()
-
-))
 
 (defun wy-latex-compile ()
   (interactive)

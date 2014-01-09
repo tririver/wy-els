@@ -3,7 +3,7 @@
 # key: fun
 # --
 #+NAME: ${1:fun-name}
-#+BEGIN_SRC ${2:mma} :var ${3:x}=${4:1} :exports both
+#+BEGIN_SRC ${2:mathematica} :var ${3:x}=${4:1} :exports both
   $5
 #+END_SRC
 #+CALL: $1($3=$4)

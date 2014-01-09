@@ -1,4 +1,4 @@
-;;; ob-mma.el --- org-babel functions for Mathematica evaluation
+;;; ob-mathematica.el --- org-babel functions for Mathematica evaluation
 
 ;; Copyright (C) 2014 Yi Wang
 
@@ -32,14 +32,14 @@
 (require 'ob-eval)
 
 (defvar org-babel-tangle-lang-exts)
-(add-to-list 'org-babel-tangle-lang-exts '("mma" . "m"))
+(add-to-list 'org-babel-tangle-lang-exts '("mathematica" . "m"))
 
-(defvar org-babel-default-header-args:mma '())
+(defvar org-babel-default-header-args:mathematica '())
 
-(defvar org-babel-mma-command "MathematicaScript -script"
+(defvar org-babel-mathematica-command "MathematicaScript -script"
   "Name of the command for executing Mathematica code.")
 
-(defun org-babel-expand-body:mma (body params)
+(defun org-babel-expand-body:mathematica (body params)
   "Expand BODY according to PARAMS, return the expanded body."
   (let ((vars (mapcar #'cdr (org-babel-get-header params :var))))
     (concat
@@ -47,15 +47,15 @@
       (lambda (pair)
 	(format "%s=%s;"
 		(car pair)
-		(org-babel-mma-var-to-mma (cdr pair))))
+		(org-babel-mathematica-var-to-mathematica (cdr pair))))
       vars "\n") "\nPrint[\n" body "\n]\n")))
 
-(defun org-babel-execute:mma (body params)
+(defun org-babel-execute:mathematica (body params)
   "Execute a block of Mathematica code with org-babel.  This function is
 called by `org-babel-execute-src-block'"
   (let* ((result-params (cdr (assoc :result-params params)))
-	 (full-body (org-babel-expand-body:mma body params))
-	 (tmp-script-file (org-babel-temp-file "mma-")))
+	 (full-body (org-babel-expand-body:mathematica body params))
+	 (tmp-script-file (org-babel-temp-file "mathematica-")))
     ;; actually execute the source-code block 
     (with-temp-file tmp-script-file (insert full-body))
     ;; (with-temp-file "/tmp/dbg" (insert full-body))
@@ -66,23 +66,23 @@ called by `org-babel-execute-src-block'"
 		    (not (member "table" result-params))))
 	   raw
 	 (org-babel-script-escape (org-babel-trim raw))))
-    (org-babel-eval (concat org-babel-mma-command " " tmp-script-file) ""))))
+    (org-babel-eval (concat org-babel-mathematica-command " " tmp-script-file) ""))))
 
-(defun org-babel-prep-session:mma (session params)
+(defun org-babel-prep-session:mathematica (session params)
   "This function does nothing so far"
   (error "Currently no support for sessions"))
 
-(defun org-babel-prep-session:mma (session body params)
+(defun org-babel-prep-session:mathematica (session body params)
   "This function does nothing so far"
   (error "Currently no support for sessions"))
 
-(defun org-babel-mma-var-to-mma (var)
+(defun org-babel-mathematica-var-to-mathematica (var)
   "Convert an elisp value to a Mathematica variable.
 Convert an elisp value, VAR, into a string of Mathematica source code
 specifying a variable of the same value."
   (if (listp var)
-      (concat "{" (mapconcat #'org-babel-mma-var-to-mma var ", ") "}")
+      (concat "{" (mapconcat #'org-babel-mathematica-var-to-mathematica var ", ") "}")
     (format "%S" var)))
 
-(provide 'ob-mma)
+(provide 'ob-mathematica)
 

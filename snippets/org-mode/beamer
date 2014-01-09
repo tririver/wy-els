@@ -2,12 +2,14 @@
 # name: beamer
 # key: beamer
 # --
-#+latex_header: \hypersetup{colorlinks=true, urlcolor=blue}
+#+LATEX: \input{/home/wangyi/Templates/org_beamer_header.tex}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{color}
 #+BEAMER_THEME: Rochester
-#+OPTIONS: H:2 toc:nil ^:nil
+#+OPTIONS: H:3 toc:nil ^:nil
 
-#+TITLE: ${1:Title of Presentation}
+#+TITLE: ${1:title}
 #+AUTHOR: Yi Wang (DAMTP, Cambridge)
 #+EMAIL: yw366@cam.ac.uk
 
-$0
+* $0

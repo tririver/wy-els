@@ -2,6 +2,6 @@
 # name: src
 # key: src
 # --
-#+BEGIN_SRC ${1:mma} :exports both
+#+BEGIN_SRC ${1:mathematica} :exports both
   $2
 #+END_SRC

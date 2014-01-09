@@ -1,5 +1,8 @@
 (setq org-confirm-babel-evaluate nil)
 
+(require 'org-latex)
+(setq org-latex-listings t)
+
 (setq org-export-html-validation-link nil)
 (setq org-support-shift-select t)
 (setq org-replace-disputed-keys t)
